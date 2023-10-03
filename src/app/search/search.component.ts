@@ -15,6 +15,6 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(form.value)
+    console.log(form.value.search)
   }
 }

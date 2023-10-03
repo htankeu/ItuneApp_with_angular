@@ -9,6 +9,7 @@ import { MusicListComponent } from './music-list/music-list.component';
 import { LibraryComponent } from './library/library.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './search/search.component';
+import { AppConfigModule } from './app-config/app-config.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SearchComponent } from './search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppConfigModule
   ],
   providers: [],
   bootstrap: [AppComponent]

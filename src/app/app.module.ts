@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { MusicComponent } from './music/music.component';
 import { MusicListComponent } from './music-list/music-list.component';
 import { LibraryComponent } from './library/library.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LibraryComponent } from './library/library.component';
     LibraryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

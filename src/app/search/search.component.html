@@ -1,8 +1,13 @@
-<div class="container">
-    <nav class="navbar navbar-light bg-light">
-        <form class="form-inline" (ngSubmit)="onSubmit(f)" #f="ngForm">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" ngModel aria-label="Search" required>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </nav>
-</div>
+
+  <nav class="container navbar navbar-light bg-light">
+      <form class="form-inline" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" ngModel aria-label="Search" required>
+        <button class="btn btn-outline-success my-2 my-sm-0 flot-end" type="submit">Search</button>
+      </form>
+    </nav>
+
+  
+  <div class="container">
+
+    <app-music-list [musics]="ituneservice.musics"></app-music-list>
+  </div>

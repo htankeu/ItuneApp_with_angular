@@ -8,6 +8,7 @@ import { map } from "rxjs";
 export class ItuneService {
 
     private query: String |undefined;
+    public musics: Music[]|undefined
 
     constructor(private http: HttpClient, @Inject(APP_CONFIG) private config:AppConfig){
 
@@ -19,9 +20,14 @@ export class ItuneService {
             map(data=>{
                 const res: any = data;
                 console.log(res.results);
-                return res.results?res.results:[]
+                this.musics = res.results?res.results: []
+                return this.musics
             })
         ).subscribe((music)=>'')
+    }
+
+    public musicListen(musicId: String){
+        return this.http.get(`${this.config.apiEndPoint}lookup/?id=${musicId}`)
     }
 
 
@@ -32,7 +38,10 @@ export class ItuneService {
             item.artworkUrl30,
             item.artworkUrl60,
             item.artworkUrl100,
-            item.trackId
+            item.trackName,
+            item.collectionName,
+            item.trackId,
+            item.previewUrl
         )
     }
 }

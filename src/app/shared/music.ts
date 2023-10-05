@@ -5,5 +5,8 @@ export class Music{
         public artworkUrl30: String,
         public artworkUrl60: String,
         public artworkUrl100: String,
-        public trackId: Number){}
+        public trackName:String,
+        public collectionName:String,
+        public trackId: Number,
+        public previewUrl: String){}
 }

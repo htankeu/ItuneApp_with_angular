@@ -1,1 +1,10 @@
-<p>music works!</p>
+<br/>
+
+<ul class="list-group">
+    <li class="list-group-item active">Artist: {{music.artistName}}</li>
+    <li class="list-group-item active">
+        <img src="{{music.artworkUrl60}}" alt="{{music.artistName}}">
+    </li>
+    <li class="list-group-item">Title: {{music.trackName}} <a href="{{music.previewUrl}}"class="btn btn-primary float-end">Play</a></li>
+    <li class="list-group-item">Album: {{music.collectionName}}</li>
+</ul>

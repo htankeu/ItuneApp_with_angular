@@ -1,0 +1,11 @@
+.mainDiv{
+    gap:25px
+}
+
+.my-img{
+    object-fit: cover;
+}
+
+.myText{
+    text-align: right;
+}
